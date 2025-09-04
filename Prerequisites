@@ -1,0 +1,13 @@
+sudo dnf update -y
+
+# Install development tools
+sudo dnf groupinstall "Development Tools" -y || echo "Group not available, continue"
+
+# Install necessary packages
+sudo dnf install -y ruby ruby-devel python3 python3-pip git curl jq mailx
+
+# Install twurl for Twitter API
+sudo gem install twurl
+
+# Install Python libraries
+pip3 install twilio requests
